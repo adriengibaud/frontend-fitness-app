@@ -80,6 +80,7 @@ const NavBarContainer = styled.nav<{ position: number }>`
   top: 0;
   z-index: 2;
   width: 100%;
+  background: white;
 `;
 
 const LogoContainer = styled.div<{ position: number }>`

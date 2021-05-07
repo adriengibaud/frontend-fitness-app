@@ -7,7 +7,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: Raleway, sans-serif;
     font-weight: 400;
-    background: white;
   }
   body {
     min-height: 100vh;
