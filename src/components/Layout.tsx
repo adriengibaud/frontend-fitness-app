@@ -21,8 +21,6 @@ const Layout = ({ children }) => {
 export default Layout;
 
 const Body = styled.body`
-  margin-top: 50px;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
 `;

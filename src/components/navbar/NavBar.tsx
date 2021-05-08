@@ -80,7 +80,10 @@ const NavBarContainer = styled.nav<{ position: number }>`
   top: 0;
   z-index: 2;
   width: 100%;
-  background: white;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 0 0 10px 10px;
 `;
 
 const LogoContainer = styled.div<{ position: number }>`
@@ -93,6 +96,7 @@ const LogoContainer = styled.div<{ position: number }>`
   gap: 15px;
   h1 {
     font-size: 30px;
+    font-weight: 700;
     color: ${(props) => props.theme.colors.primary};
   }
   h4 {

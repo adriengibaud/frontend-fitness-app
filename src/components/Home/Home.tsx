@@ -1,87 +1,99 @@
 import Image from 'next/image';
-import styled from 'styled-components';
+import { IoIosFitness } from 'react-icons/io';
+import { IoFitnessSharp } from 'react-icons/io5';
+import { GrYoga } from 'react-icons/gr';
+import { FaRunning } from 'react-icons/fa';
+import styled, { keyframes } from 'styled-components';
+import Card from './Card';
 
 const Home = () => {
   return (
     <Container>
-      <ImageContainer>
-        <img src='/homeImage.jpeg' />
-      </ImageContainer>
-      <TextContainer>
-        <h1>Flavia Silva</h1>
-        <h3>personal trainer</h3>
-        <p>
-          Le Lorem Ipsum est simplement du faux texte employé dans la
-          composition et la mise en page avant impression. Le Lorem Ipsum est le
-          faux texte standard de l'imprimerie depuis les années 1500, quand un
-          imprimeur anonyme assembla ensemble des morceaux de texte pour
-          réaliser un livre spécimen de polices de texte. Il n'a pas fait que
-          survivre cinq siècles, mais s'est aussi adapté à la bureautique
-          informatique, sans que son contenu n'en soit modifié. Il a été
-          popularisé dans les années 1960 grâce à la vente de feuilles Letraset
-          contenant des passages du Lorem Ipsum, et, plus récemment, par son
-          inclusion dans des applications de mise en page de texte, comme Aldus
-          PageMaker.
-        </p>
-        <p>
-          Le Lorem Ipsum est simplement du faux texte employé dans la
-          composition et la mise en page avant impression. Le Lorem Ipsum est le
-          faux texte standard de l'imprimerie depuis les années 1500, quand un
-          imprimeur anonyme assembla ensemble des morceaux de texte pour
-          réaliser un livre spécimen de polices de texte. Il n'a pas fait que
-          survivre cinq siècles, mais s'est aussi adapté à la bureautique
-          informatique, sans que son contenu n'en soit modifié. Il a été
-          popularisé dans les années 1960 grâce à la vente de feuilles Letraset
-          contenant des passages du Lorem Ipsum, et, plus récemment, par son
-          inclusion dans des applications de mise en page de texte, comme Aldus
-          PageMaker.
-        </p>
-      </TextContainer>
+      <Section>
+        <Title>Formules</Title>
+        <CardContainer>
+          <Card
+            title='Tips and Advice'
+            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
+            icon={<IoIosFitness />}
+          />
+          <Card
+            title='Tips and Advice'
+            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
+            icon={<GrYoga />}
+          />
+          <Card
+            title='Tips and Advice'
+            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
+            icon={<FaRunning />}
+          />
+          <Card
+            title='Tips and Advice'
+            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
+            icon={<IoFitnessSharp />}
+          />
+        </CardContainer>
+      </Section>
     </Container>
   );
 };
 
 export default Home;
 
+const animateBackground = keyframes`
+  from {
+    background-position: -20px 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
+`;
+
 const Container = styled.div`
-  width: 95vw;
-  margin: 20px auto;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+  background-image: url('/fullSizeBgImage.jpeg');
+
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  animation: ${animateBackground} 8s linear infinite alternate;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Section = styled.section`
+  width: 520px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+`;
+
+const Title = styled.h1`
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  ::after {
+    content: '';
+    height: 2px;
+    width: 20%;
+    background: ${(props) => props.theme.colors.secondary};
+    position: absolute;
+    left: calc(50% - 10%);
+    bottom: -5px;
+  }
+`;
+
+const CardContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-`;
-
-const ImageContainer = styled.div`
-  position: relative;
-  width: 45%;
-  background: rgba(84, 89, 95, 0.3);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-
-  border-radius: 15px;
-  img {
-    width: 100%;
-    margin: 5% 0 -5% 5%;
-    border-radius: 15px;
-  }
-`;
-
-const TextContainer = styled.div`
-  width: 45%;
-  padding-right: 15px;
-  h1,
-  h3 {
-    text-align: right;
-  }
-  h1 {
-    color: ${(props) => props.theme.colors.primary};
-    font-size: 35px;
-  }
-  h3 {
-    color: ${(props) => props.theme.colors.secondary};
-  }
-  p {
-    margin-top: 40px;
-    line-height: 25px;
-  }
+  flex-wrap: wrap;
+  gap: 20px;
 `;
