@@ -21,6 +21,8 @@ const Layout = ({ children }) => {
 export default Layout;
 
 const Body = styled.body`
+  max-width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 `;

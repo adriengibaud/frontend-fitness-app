@@ -46,10 +46,7 @@ const NavBar = () => {
       </LogoContainer>
       <ButtonContainer>
         <li>
-          <NavLink
-            text='Coaching'
-            clickHandler={() => router.push('/coaching')}
-          />
+          <NavLink text='Coaching' clickHandler={() => console.log('yo')} />
         </li>
         <li>
           <NavLink
