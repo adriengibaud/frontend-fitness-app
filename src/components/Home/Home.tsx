@@ -5,35 +5,14 @@ import { GrYoga } from 'react-icons/gr';
 import { FaRunning } from 'react-icons/fa';
 import styled, { keyframes } from 'styled-components';
 import Card from './Card';
+import Button from '../Button';
 
 const Home = () => {
   return (
     <Container>
-      <Section>
-        <Title>Formules</Title>
-        <CardContainer>
-          <Card
-            title='Tips and Advice'
-            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
-            icon={<IoIosFitness />}
-          />
-          <Card
-            title='Tips and Advice'
-            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
-            icon={<GrYoga />}
-          />
-          <Card
-            title='Tips and Advice'
-            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
-            icon={<FaRunning />}
-          />
-          <Card
-            title='Tips and Advice'
-            text='Blablalafl fafjafklj fadfk kfkfa j akkk fja lfkajf jkafjk laf'
-            icon={<IoFitnessSharp />}
-          />
-        </CardContainer>
-      </Section>
+      <Button />
+      <Button />
+      <Button />
     </Container>
   );
 };
@@ -53,15 +32,16 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 50px 0;
-  background-image: url('/fullSizeBgImage.jpeg');
-
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/homeImage.jpeg');
   background-size: cover;
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  transform: scale(1.05);
-  animation: ${animateBackground} 8s linear infinite alternate;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 `;
 
 const Section = styled.section`
