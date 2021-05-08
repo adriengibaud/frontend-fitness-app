@@ -1,19 +1,18 @@
 import styled, { css } from 'styled-components';
 import { Component } from 'react';
+import { IconBaseProps } from 'react-icons';
 
 const Card = ({
-  bgColor,
   title,
   text,
   icon,
 }: {
-  bgColor: string;
   title: string;
   text: string;
-  icon: Component;
+  icon: IconBaseProps;
 }) => {
   return (
-    <Container bgColor={bgColor}>
+    <Container>
       <div className='icons'>{icon}</div>
       <div className='infos'>
         <h4>{title}</h4>
@@ -25,7 +24,7 @@ const Card = ({
 
 export default Card;
 
-const Container = styled.div<{ bgColor: string }>`
+const Container = styled.div`
   width: 250px;
   height: 120px;
   background: ${(props) => props.theme.colors.secondary};
