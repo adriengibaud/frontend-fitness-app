@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Home from 'src/components/Home/Home';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Index() {
   return (
@@ -18,3 +19,9 @@ export default function Index() {
     </>
   );
 }
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});

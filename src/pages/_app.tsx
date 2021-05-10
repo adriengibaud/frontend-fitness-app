@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import { store } from '../app/store';
 import Layout from '../components/Layout';
-import '../services/i18n';
+import { appWithTranslation } from 'next-i18next';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -13,4 +13,4 @@ const MyApp = ({ Component, pageProps }) => {
   );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

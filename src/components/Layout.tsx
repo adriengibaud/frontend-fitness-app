@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
 export default Layout;
 
-const Body = styled.body`
+const Body = styled.div`
   max-width: 100vw;
   overflow-x: hidden;
   display: flex;

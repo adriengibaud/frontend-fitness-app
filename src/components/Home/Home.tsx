@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { IoIosFitness } from 'react-icons/io';
 import { IoFitnessSharp } from 'react-icons/io5';
 import { GrYoga } from 'react-icons/gr';
@@ -6,31 +8,24 @@ import { FaRunning } from 'react-icons/fa';
 import styled, { keyframes } from 'styled-components';
 import Card from './Card';
 import Button from '../Button';
-import { useTranslation } from 'react-i18next';
-import useSSR from 'use-ssr';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 const Home = () => {
   const { i18n } = useTranslation();
-  var { isBrowser, isServer, isNative } = useSSR();
-
-  console.log('IS BROWSER: ', isBrowser ? '👍' : '👎');
-  console.log('IS SERVER: ', isServer ? '👍' : '👎');
-  console.log('IS NATIVE: ', isNative ? '👍' : '👎');
+  console.log(i18n.language);
 
   return (
     <Container>
-      Is in browser? {isBrowser ? '👍' : '👎'}
-      <br />
-      Is on server? {isServer ? '👍' : '👎'}
-      <select
-        value={i18n.language}
-        onChange={(e) => i18n.changeLanguage(e.target.value)}
-      >
-        <option value='en'>English</option>
-        <option value='fr'>Francais</option>
-        <option value='pt'>Portuguese</option>
-      </select>
-      <Button />
+      <Link href='/' locale='fr'>
+        <p>EN FRANCÉ</p>
+      </Link>
+      <Link href='/' locale='pt'>
+        <p>EN PORTUGUESE</p>
+      </Link>
+      <Link href='/' locale='en'>
+        <p>EN ANGLÉ</p>
+      </Link>
       <Button />
       <Button />
     </Container>
