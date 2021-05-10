@@ -6,10 +6,21 @@ import { FaRunning } from 'react-icons/fa';
 import styled, { keyframes } from 'styled-components';
 import Card from './Card';
 import Button from '../Button';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { i18n } = useTranslation();
+
   return (
     <Container>
+      <select
+        value={i18n.language}
+        onChange={(e) => i18n.changeLanguage(e.target.value)}
+      >
+        <option value='en'>English</option>
+        <option value='fr'>Francais</option>
+        <option value='pt'>Portuguese</option>
+      </select>
       <Button />
       <Button />
       <Button />
@@ -32,7 +43,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   padding: 50px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url('/homeImage.jpeg');
   background-size: cover;
   background-position: 0px 0px;
