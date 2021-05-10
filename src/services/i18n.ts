@@ -8,7 +8,14 @@ i18next
     react: {
       useSuspense: false,
     },
+    load: 'languageOnly',
+    ns: ['translation'],
+    defaultNS: 'translation',
+    saveMissing: true,
     lng: 'fr',
+    preload: ['fr'],
+    fallbackLng: 'en',
+    supportedLngs: ['en', 'fr', 'pt'],
     interpolation: {
       escapeValue: false,
     },

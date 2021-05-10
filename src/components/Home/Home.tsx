@@ -7,9 +7,15 @@ import styled, { keyframes } from 'styled-components';
 import Card from './Card';
 import Button from '../Button';
 import { useTranslation } from 'react-i18next';
+import useSSR from 'use-ssr';
 
 const Home = () => {
   const { i18n } = useTranslation();
+  var { isBrowser, isServer, isNative } = useSSR();
+
+  console.log('IS BROWSER: ', isBrowser ? '👍' : '👎');
+  console.log('IS SERVER: ', isServer ? '👍' : '👎');
+  console.log('IS NATIVE: ', isNative ? '👍' : '👎');
 
   return (
     <Container>
