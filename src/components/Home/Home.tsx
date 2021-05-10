@@ -19,6 +19,9 @@ const Home = () => {
 
   return (
     <Container>
+      Is in browser? {isBrowser ? '👍' : '👎'}
+      <br />
+      Is on server? {isServer ? '👍' : '👎'}
       <select
         value={i18n.language}
         onChange={(e) => i18n.changeLanguage(e.target.value)}
