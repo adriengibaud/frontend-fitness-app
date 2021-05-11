@@ -2,12 +2,10 @@ import styled from 'styled-components';
 import { FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'next-i18next';
 
-const Button = () => {
-  const { t } = useTranslation('common');
-
+const Button = ({ text }: { text: string }) => {
   return (
     <Container>
-      {t('app_name')} <FiArrowRight />
+      {text} <FiArrowRight />
     </Container>
   );
 };
