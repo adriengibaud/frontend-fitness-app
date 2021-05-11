@@ -57,10 +57,12 @@ const Container = styled.div`
 
 const ImageContainer = styled.div`
   background-color: white;
+  width: 100vw;
+  height: 60vh;
   .fullSizeImage {
-    height: 60vh;
+    height: 100%;
     object-fit: cover;
-    width: 100%;
+    width: 100vw;
   }
   .smallSizeImage {
     display: none;
@@ -73,7 +75,7 @@ const ImageContainer = styled.div`
       object-fit: cover;
       display: block;
       width: 100vw;
-      max-height: 60vh;
+      height: 100%;
     }
   }
 `;
