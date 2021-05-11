@@ -77,10 +77,9 @@ const NavBarContainer = styled.nav<{ position: number }>`
   top: 0;
   z-index: 2;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  border-radius: 0 0 10px 10px;
 `;
 
 const LogoContainer = styled.div<{ position: number }>`
@@ -111,4 +110,8 @@ const ButtonContainer = styled.ul`
   align-items: center;
   padding: 0 20px;
   list-style: none;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;

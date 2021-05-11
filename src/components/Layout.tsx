@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        {/*<NavBar />*/}
+        <NavBar />
         <Body>
           {children}
           {/*<Footer>Je suis un footer</Footer>*/}

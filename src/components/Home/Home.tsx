@@ -1,7 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { useTranslation } from 'next-i18next';
-import Card from './Card';
 import Image from 'next/image';
+import CardContainer from './CardContainer';
+import Features from './Features';
 
 const Home = () => {
   const { i18n } = useTranslation();
@@ -28,40 +29,13 @@ const Home = () => {
           quality={100}
         />
       </ImageContainer>
-      <CardContainer>
-        <Card
-          color='#3da9c9'
-          title='our mission'
-          text='Our Club promotes and friendship through running.'
-          actionText='more'
-        />
-        <Card
-          color='#29b6f6'
-          title='our mission'
-          text='Our Club promotes and friendship through running.'
-          actionText='more'
-        />
-        <Card
-          color='#0086c3'
-          title='our mission'
-          text='Our Club promotes and friendship through running.'
-          actionText='more'
-        />
-      </CardContainer>
+      <CardContainer />
+      <Features />
     </Container>
   );
 };
 
 export default Home;
-
-const animateBackground = keyframes`
-  from {
-    background-position: -20px 0;
-  }
-  to {
-    background-position: 20px 0;
-  }
-`;
 
 const Container = styled.div`
   display: flex;
@@ -87,16 +61,4 @@ const ImageContainer = styled.div`
       display: none !important;
     }
   }
-`;
-
-const CardContainer = styled.div`
-  width: 80vw;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: -200px auto 50px auto;
-  gap: 25px;
 `;
