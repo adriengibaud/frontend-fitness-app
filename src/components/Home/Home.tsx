@@ -9,8 +9,10 @@ const Home = () => {
 
   return (
     <Container>
-      <img className='fullSizeImage' src='/homeImageFull.jpg' />
-      <img className='smallSizeImage' src='homeImageSmall.jpeg' />
+      <ImageContainer>
+        <img className='fullSizeImage' src='/homeImageFull.jpg' />
+        <img className='smallSizeImage' src='homeImageSmall.jpeg' />
+      </ImageContainer>
       <CardContainer>
         <Card
           color='#3da9c9'
@@ -51,6 +53,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const ImageContainer = styled.div`
+  background-color: white;
   .fullSizeImage {
     height: 60vh;
     object-fit: cover;
