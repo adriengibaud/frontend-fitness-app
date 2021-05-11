@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { useTranslation } from 'next-i18next';
 import Card from './Card';
+import Image from 'next/image';
 
 const Home = () => {
   const { i18n } = useTranslation();
@@ -10,8 +11,22 @@ const Home = () => {
   return (
     <Container>
       <ImageContainer>
-        <img className='fullSizeImage' src='/homeImageFull.jpg' />
-        <img className='smallSizeImage' src='homeImageSmall.jpeg' />
+        <Image
+          className='smallSizeImage'
+          src='/homeImageSmall.jpeg'
+          alt='small head picture'
+          layout='fill'
+          objectFit={'cover'}
+          quality={100}
+        />
+        <Image
+          className='fullSizeImage'
+          src='/homeImageFull.jpg'
+          alt='full head picture'
+          layout='fill'
+          objectFit={'cover'}
+          quality={100}
+        />
       </ImageContainer>
       <CardContainer>
         <Card
@@ -56,26 +71,20 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
+  position: relative;
   background-color: white;
   width: 100vw;
   height: 60vh;
-  .fullSizeImage {
-    height: 100%;
-    object-fit: cover;
-    width: 100vw;
-  }
+  z-index: -1;
   .smallSizeImage {
-    display: none;
+    display: none !important;
   }
   @media screen and (max-width: 800px) {
-    .fullSizeImage {
-      display: none;
-    }
     .smallSizeImage {
-      object-fit: cover;
-      display: block;
-      width: 100vw;
-      height: 100%;
+      display: block !important;
+    }
+    .fullSizeImage {
+      display: none !important;
     }
   }
 `;
