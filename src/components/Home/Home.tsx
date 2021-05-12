@@ -31,6 +31,7 @@ const Home = () => {
       </ImageContainer>
       <CardContainer />
       <Features />
+      <h1>{t('app_name')}</h1>
     </Container>
   );
 };

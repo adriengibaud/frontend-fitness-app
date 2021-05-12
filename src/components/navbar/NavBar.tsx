@@ -46,16 +46,25 @@ const NavBar = () => {
       </LogoContainer>
       <ButtonContainer>
         <li>
-          <NavLink text='Coaching' clickHandler={() => console.log('yo')} />
+          <NavLink
+            position={scrollPosition}
+            text='Coaching'
+            clickHandler={() => console.log('yo')}
+          />
         </li>
         <li>
           <NavLink
+            position={scrollPosition}
             text='Reseaux Sociaux'
             clickHandler={() => router.push('/socialNetwork')}
           />
         </li>
         <li>
-          <NavLink text='Login' clickHandler={() => console.log('click')} />
+          <NavLink
+            position={scrollPosition}
+            text='Login'
+            clickHandler={() => console.log('click')}
+          />
         </li>
       </ButtonContainer>
     </NavBarContainer>
@@ -66,7 +75,7 @@ export default NavBar;
 
 const NavBarContainer = styled.nav<{ position: number }>`
   height: ${({ position }) =>
-    (position < 40 && '100px') || (position >= 40 && '60px')};
+    (position < 40 && '70px') || (position >= 40 && '35px')};
   transition: 0.4s;
   display: flex;
   flex-direction: row;
@@ -77,9 +86,9 @@ const NavBarContainer = styled.nav<{ position: number }>`
   top: 0;
   z-index: 2;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0em 0.15em 2em rgb(0 0 0 / 15%);
+  overflow-y: hidden;
 `;
 
 const LogoContainer = styled.div<{ position: number }>`
@@ -103,7 +112,7 @@ const LogoContainer = styled.div<{ position: number }>`
 `;
 
 const ButtonContainer = styled.ul`
-  height: 50px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   gap: 20px;

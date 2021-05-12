@@ -74,6 +74,7 @@ export default Features;
 
 const Container = styled.section`
   width: 100vw;
+  max-width: 1200px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -87,14 +88,19 @@ const Container = styled.section`
 const ImageContainer = styled.div`
   z-index: -1;
   position: relative;
-  width: 50vw;
-  height: 80vh;
+  width: 600px;
+  height: 900px;
+  @media screen and (max-width: 1200px) {
+    width: 50vw;
+    max-width: 700px;
+    height: 80vh;
+  }
   @media screen and (max-width: 800px) {
     margin: auto;
     width: 80vw;
     height: 80vh;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 100vw;
     height: 80vh;
   }
@@ -103,9 +109,9 @@ const ImageContainer = styled.div`
 const FeatureContainer = styled.div`
   display: flex;
   flex-direction: column;
-
+  padding: 20px;
   width: 350px;
-  margin: 60px auto;
+  margin: 0 auto;
   gap: 0;
   justify-content: space-between;
   .feature {
@@ -131,8 +137,12 @@ const FeatureContainer = styled.div`
   p {
     margin-top: 16px;
     font-family: Montserrat;
+    line-height: 1.4;
   }
   @media screen and (max-width: 800px) {
     gap: 60px;
+  }
+  @media screen and (max-width: 600px) {
+    margin: 60px auto;
   }
 `;
