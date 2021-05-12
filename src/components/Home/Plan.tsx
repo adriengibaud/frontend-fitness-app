@@ -37,7 +37,7 @@ const Plan = ({
             <ul>
               {features.map((e) => {
                 return (
-                  <Feature>
+                  <Feature key={e.id}>
                     <ImageContainer>
                       <Image
                         src={e.image}
