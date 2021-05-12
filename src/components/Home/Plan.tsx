@@ -95,7 +95,7 @@ const Container = styled.div`
 `;
 
 const Description = styled.div`
-  width: 400px;
+  width: 300px;
   background: blue;
   margin: 50px 0px;
   @media screen and (max-width: 850px) {
@@ -105,8 +105,8 @@ const Description = styled.div`
 
 const PlanContainer = styled.div`
   background: white;
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 350px;
+  max-width: 350px;
   margin: 50px 0px;
   padding: 20px 30px;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
