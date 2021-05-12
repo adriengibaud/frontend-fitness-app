@@ -1,0 +1,16 @@
+{
+  "program1": {
+    "h2": "Programmes Donut",
+    "p1": "Nos programmes sont entièrement adaptés à vos besoins. Tous nos programmes de fitness et de nutritions sont personalisés et adaptés à votre condition physique à vos allergies et au matériel à votre disposition",
+    "p2": "Vous recevrez votre programme directement par Email avec toutes les infos nécéssaires"
+  },
+  "program2":{
+    "h2" : "Spécialisations",
+    "l1": "Perte de poids",
+    "l2": "Coaching nutritionel",
+    "l3": "Rééquilibrage alimentaire",
+    "l4": "Prise de masse",
+    "l5": "Renforcement musculaire",
+    "cta": "Choisissez parmis nos plans ci-dessous"
+  }
+}

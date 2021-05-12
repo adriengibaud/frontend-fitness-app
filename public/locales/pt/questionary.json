@@ -1,0 +1,21 @@
+{
+  "question1": {
+    "question" : "Comment puis-je t'aider ?",
+    "options" : ["Perte de poids", "Prise de masse", "Renforcement musculaire"]
+  },
+  "question2": {
+    "question": "Ton sexe ?",
+    "options": ["Homme", "Femme"]
+  },
+  "question3": {
+    "question": "Quel age as tu ?",
+    "options" : ["18-24", "25-30", "plus de 30"]
+  },
+  "question4": {
+    "question": "Pour quelle raison souhaites tu suivre un suivis sportif ?",
+    "options": "Écris ici"
+  }
+  
+  
+
+}

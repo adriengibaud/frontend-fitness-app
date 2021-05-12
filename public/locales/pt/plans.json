@@ -1,0 +1,15 @@
+{
+  "plan1" : {
+    "h3": "Complet",
+    "sub": "Coaching fitness et nutrition",
+    "features" : {
+      "1" : "Messages privés illimité avec votre coach personnel",
+      "2" : "Programme personalisé avec le matériel à votre disposition",
+      "3" : "Programme cardio du niveau débutant à expert",
+      "4" : "Programme alimentaire adapté fait par une personne qualifée",
+      "5" : "Flexible et mobile, adaptés à vos possibilités",
+      "6" : "2 rendez-vous vidéos avec votre coach par mois"
+    }
+  },
+  "more-info-button": "Plus d'infos"
+}
