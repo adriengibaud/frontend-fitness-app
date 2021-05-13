@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'next-i18next';
 
-const Button = ({ text }: { text: string }) => {
+const Button = ({ text, color }: { text: string; color: string }) => {
   return (
-    <Container>
+    <Container color={color}>
       {text} <FiArrowRight />
     </Container>
   );
@@ -12,10 +12,10 @@ const Button = ({ text }: { text: string }) => {
 
 export default Button;
 
-const Container = styled.button`
-  font-size: 25px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid white;
+const Container = styled.button<{ color: string }>`
+  font-size: 22px;
+  background: ${(props) => props.color};
+  border: none;
   padding: 10px;
   border-radius: 50px;
   display: flex;
@@ -25,4 +25,6 @@ const Container = styled.button`
   gap: 10px;
   color: white;
   min-width: 200px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 `;

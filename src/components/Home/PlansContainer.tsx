@@ -41,6 +41,22 @@ const PlansContainer = () => {
         price={70}
         color='#00b8cc'
       />
+      <Plan
+        planNumber='plan1'
+        title={t('plan1.h3')}
+        sub={t('plan1.sub')}
+        features={planFeatures}
+        price={70}
+        color='#e91e63'
+      />
+      <Plan
+        planNumber='plan1'
+        title={t('plan1.h3')}
+        sub={t('plan1.sub')}
+        features={planFeatures}
+        price={70}
+        color='#43a047'
+      />
     </Container>
   );
 };

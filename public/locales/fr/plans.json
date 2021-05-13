@@ -9,7 +9,13 @@
       "4" : "Programme alimentaire adapté fait par une personne qualifée",
       "5" : "Flexible et mobile, adaptés à vos possibilités",
       "6" : "2 rendez-vous vidéos avec votre coach par mois"
+    },
+    "infos": {
+      "p1" : "Ce plan est parfaitement adapté à ceux cherchant à mêler budget et résultat, vous aurez ici un suivit personalisé, toutes les infos pour votre suivit alimentaire. blablablalblavla alafakfaklfak fakjfakj  afkjklfj",
+      "p2" : "Le plan inclut des rendez vous vidéos tous les mois avec votre coach personnel",
+      "next-plan": "Vous avez besoin d'un suivit plus fréquent ? Essayez notre plan premium"
     }
   },
-  "more-info-button": "Plus d'infos"
+  "more-info-button": "Plus d'infos",
+  "select-button" : "Clickez ici pour essayer"
 }

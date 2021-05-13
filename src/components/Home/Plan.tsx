@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 import { useTranslation } from 'next-i18next';
+import Button from '../Button';
 
 const Plan = ({
   planNumber,
@@ -26,7 +27,22 @@ const Plan = ({
     <>
       <Header color={color}>1</Header>
       <Container>
-        <Description>yo</Description>
+        <Description>
+          <div className='imageContainer'>
+            <Image
+              src='/logo.png'
+              alt='features image'
+              layout='fill'
+              objectFit={'contain'}
+              quality={100}
+            />
+          </div>
+          <div className='textContainer'>
+            <p>{t(`${planNumber}.infos.p1`)}</p>
+            <p>{t(`${planNumber}.infos.p2`)}</p>
+            <p>{t(`${planNumber}.infos.next-plan`)}</p>
+          </div>
+        </Description>
         <PlanContainer>
           <TitleContainer color={color}>
             <h3>{title}</h3>
@@ -62,6 +78,9 @@ const Plan = ({
           </InfoContainer>
         </PlanContainer>
       </Container>
+      <ButtonContainer>
+        <Button color={color} text={t('select-button')} />
+      </ButtonContainer>
     </>
   );
 };
@@ -90,24 +109,38 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-top: 40px;
+  padding-top: 70px;
   background: ${(props) => props.theme.colors.secondaryLight};
 `;
 
 const Description = styled.div`
-  width: 300px;
-  background: blue;
+  min-width: 300px;
   margin: 50px 0px;
   @media screen and (max-width: 670px) {
     display: none;
+  }
+  .imageContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .textContainer {
+    padding: 40px 35px;
+    text-align: center;
+    font: 1.2rem Montserrat, sans-serif;
+    line-height: 35px;
+  }
+  p {
+    margin-bottom: 30px;
   }
 `;
 
 const PlanContainer = styled.div`
   background: white;
   min-width: 350px;
-  max-width: 350px;
-  margin: 50px 0px;
+  max-width: 450px;
+  margin: 50px 10px;
   padding: 20px 30px;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
     0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
@@ -136,7 +169,7 @@ const InfoContainer = styled.div<{ color: string }>`
   flex-direction: column;
   justify-content: space-between;
   ul {
-    margin: 30px 0px;
+    margin: 30px 0px 0 0;
   }
   .price {
     display: flex;
@@ -150,13 +183,17 @@ const InfoContainer = styled.div<{ color: string }>`
     border-bottom: 3px solid ${({ color }) => color};
   }
   button {
-    margin-bottom: 30px;
+    margin: 10px 0 30px 0;
     padding: 10px 0;
     background: none;
     border: 3px solid ${({ color }) => color};
     border-radius: 5px;
     color: ${({ color }) => color};
     font: 25px Montserrat, sans-serif;
+    display: none;
+    @media screen and (max-width: 670px) {
+      display: inline;
+    }
   }
 `;
 
@@ -197,4 +234,9 @@ const ImageContainer = styled.div`
   max-width: 50px;
   max-height: 50px;
   margin: auto;
+`;
+
+const ButtonContainer = styled.div`
+  margin: -25px auto 100px auto;
+  width: 320px;
 `;
