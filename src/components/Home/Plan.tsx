@@ -237,6 +237,5 @@ const ImageContainer = styled.div`
 `;
 
 const ButtonContainer = styled.div`
-  margin: -25px auto 100px auto;
-  width: 320px;
+  margin: -25px 0 50px 0;
 `;

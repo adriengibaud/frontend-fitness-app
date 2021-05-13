@@ -15,6 +15,8 @@ export default Button;
 const Container = styled.button<{ color: string }>`
   font-size: 22px;
   background: ${(props) => props.color};
+  margin: auto;
+  width: auto;
   border: none;
   padding: 10px;
   border-radius: 50px;
