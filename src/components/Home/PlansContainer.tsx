@@ -53,9 +53,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 850px) {
-    margin-top: 350px;
   }
   @media screen and (max-width: 600px) {
-    margin-top: 60vh;
   }
 `;

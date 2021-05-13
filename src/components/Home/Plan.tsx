@@ -98,7 +98,7 @@ const Description = styled.div`
   width: 300px;
   background: blue;
   margin: 50px 0px;
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 670px) {
     display: none;
   }
 `;

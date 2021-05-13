@@ -37,12 +37,11 @@ const CardContainer = styled.section`
   position: static;
   display: flex;
   flex-direction: row;
-  height: 40vh;
+
   @media screen and (max-width: 850px) {
     flex-direction: column;
   }
   @media screen and (max-width: 1050px) {
-    height: 50vh;
   }
 `;
 
